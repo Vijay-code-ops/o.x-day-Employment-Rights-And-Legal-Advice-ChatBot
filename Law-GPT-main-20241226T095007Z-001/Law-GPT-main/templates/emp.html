@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Rights & Legal Advice</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('pexels-cottonbro-4753879.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            border-bottom: 2px solid #FFD700;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #FFD700;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+            margin: 2rem auto;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            max-width: 80%;
+        }
+
+        .section h2 {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 1rem auto;
+            padding: 0.8rem 2rem;
+            background: #FFD700;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #FFA500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+        }
+
+        .video-container {
+            width: 50%;
+            height: 100%;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div>
+            <a href="homepage.html">Home</a>
+            <a href="home.html">Login</a>
+            <a href="#employee">Employee</a>
+            <a href="#organization">Organization</a>
+            <a href="homepage.html">About Us</a>
+        </div>
+    </header>
+
+    <section id="employee" class="section">
+        <div style="flex: 1; padding-right: 1rem;">
+            <h2>Employee Rights</h2>
+            <ul>
+                <li>Minimum Wage Laws (Varies by country).</li>
+                <li>Paid Leave (Maternity, Paternity, Annual, Sick).</li>
+                <li>Anti-discrimination Policies.</li>
+                <li>Health and Safety Standards.</li>
+                <li>Protection against Unfair Dismissal.</li>
+            </ul>
+            <a href="employee-chatbot.html" class="btn">Chatbot for Employees</a>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="8731589-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Employment Rights & Legal Advice. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

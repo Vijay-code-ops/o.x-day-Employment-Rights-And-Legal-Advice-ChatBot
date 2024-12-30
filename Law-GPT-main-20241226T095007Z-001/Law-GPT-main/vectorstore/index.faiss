@@ -1,0 +1,31 @@
+import os
+from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.vectorstores import FAISS
+from langchain.document_loaders import PyPDFLoader
+
+# Define paths
+DATASET_DIR = "dataset/"          # Directory containing the PDF files
+FAISS_INDEX_PATH = "vectorstore/"  # Directory to save the FAISS index
+
+def embed_documents():
+    # Initialize the embedding model
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+
+    # Load the documents from the dataset directory
+    docs = []
+    for filename in os.listdir(DATASET_DIR):
+        if filename.endswith(".pdf"):
+            file_path = os.path.join(DATASET_DIR, filename)
+            print(f"Loading document: {file_path}")
+            loader = PyPDFLoader(file_path)
+            docs.extend(loader.load_and_split())  # Load and split PDFs into text chunks
+
+    # Embed the documents using FAISS
+    db = FAISS.from_documents(docs, embeddings)
+
+    # Save the FAISS index to the vectorstore folder
+    db.save_local(FAISS_INDEX_PATH)
+    print(f"FAISS index saved at: {FAISS_INDEX_PATH}")
+
+if __name__ == "__main__":
+    embed_documents()

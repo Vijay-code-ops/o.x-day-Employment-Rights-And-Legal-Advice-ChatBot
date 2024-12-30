@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Rights & Legal Advice</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #2E8B57, #3CB371);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgb(0, 0, 0);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #FFD700;
+        }
+
+        .static-image-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .welcome-content {
+            flex: 1;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+            z-index: 2;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .welcome-content h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .welcome-content p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 100%;
+            margin-left: 1rem;
+            border-radius: 15px;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .static-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: auto;
+            opacity: 0.9;
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .section ul li:hover {
+            transform: scale(1.1);
+            opacity: 1.1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 1rem auto;
+            padding: 0.8rem 2rem;
+            background: black;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: #00640d;
+        }
+
+        .btn img {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                filter: brightness(1);
+                transform: scale(1);
+            }
+            50% {
+                filter: brightness(2);
+                transform: scale(1.1);
+            }
+        }
+
+        .sparkle {
+            animation: sparkle 1s ease-in-out 5;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="back.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header class="navbar">
+        <div>
+            <a href="">Home</a>
+            <a href="home.html">Login</a>
+            <a href="ui.html">Employee</a>
+            <a href="second.html">Organization</a>
+            <a href="#about" onclick="triggerSparkle()">About Us</a>
+        </div>
+    </header>
+
+    <div class="static-image-container">
+        <div class="welcome-content">
+            <h1>Welcome to Employment Rights & Legal Advice</h1>
+            <p>Your ultimate source for legal information and assistance on employment matters. Tailored for employees and organizations globally.</p>
+        </div>
+        <div class="video-container">
+            <video id="welcome-video" autoplay muted loop>
+                <source src="ready.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <img src="pexels-pavel-danilyuk-8112201.jpg" alt="Background Image" class="static-image">
+    </div>
+
+    <section id="employee" class="section">
+        <div style="flex: 2; padding-right: 1rem;">
+            <h2>Hey, are you an Employee? We assist you!</h2>
+            <ul>
+                <li>Know your Minimum Wage Rights</li>
+                <li>Avail Paid Leave Benefits</li>
+                <li>Fight Against Discrimination</li>
+                <li>Ensure a Safe Work Environment</li>
+                <li>Protect Yourself from Unfair Dismissals</li>
+            </ul>
+            <a href="ui.html" class="btn">
+                <img src="chatbot.png" alt="Chatbot Logo">Chatbot for Employees
+            </a>
+        </div>
+        <div style="flex: 1; position: relative;">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="8731589-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="organization" class="section">
+        <div style="flex: 2; padding-right: 1rem;">
+            <h2>Hey, Organization! We Support You!</h2>
+            <ul>
+                <li>Stay Compliant with Labor Laws</li>
+                <li>Maximize Tax Benefits</li>
+                <li>Invest in Employee Training</li>
+                <li>Implement Reporting Mechanisms</li>
+                <li>Ensure Equal Opportunity Policies</li>
+            </ul>
+            <a href="second.html" class="btn">
+                <img src="chatbot.png" alt="Chatbot Logo">Chatbot for Organizations
+            </a>
+        </div>
+        <div style="flex: 1; position: relative;">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="3205619-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Employment Rights & Legal Advice. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to trigger the sparkling animation
+        function triggerSparkle() {
+            const video = document.getElementById('welcome-video');
+            video.classList.add('sparkle'); // Add the sparkle class
+
+            // Remove the sparkle class after the animation ends
+            setTimeout(() => {
+                video.classList.remove('sparkle');
+            }, 5000); // Matches the animation duration (1s x 5 cycles)
+        }
+    </script>
+</body>
+</html>
